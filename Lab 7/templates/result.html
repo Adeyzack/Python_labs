@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ operation }} Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ operation }} Result</h1>
+    <p>Number 1: {{ num1 }}</p>
+    <p>Number 2: {{ num2 }}</p>
+    <p>Result: {{ result }}</p>
+    <br>
+    <a href="/">Go back to Calculator</a>
+    <p>Date and Time: {{ now }}</p>
+</body>
+</html>

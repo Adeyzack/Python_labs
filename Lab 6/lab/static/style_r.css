@@ -1,0 +1,22 @@
+/*
+Name Zekariyas Gebremedhin
+Course: SDEV 300
+Lab Six
+Stylesheet for result.html
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+}
+
+/* color a text in the result*/
+h2 {
+    color: red;
+}
+
+p{
+   color:black;
+   text-align : left
+
+}

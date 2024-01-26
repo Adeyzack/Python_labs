@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ operation }} Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ operation }} Result</h1>
+    <p>Number 1: {{ num1 }}</p>
+    <p>Number 2: {{ num2 }}</p>
+    <p>Result: {{ result }}</p>
+    <br>
+    <a href="/">Go back to Calculator</a>
+    <br>
+    <h2>Password Update</h2>
+    <form action="/password_update" method="post">
+        <input type="password" name="current_password" placeholder="Current Password" required>
+        <br>
+        <input type="password" name="new_password" placeholder="New Password" required>
+        <br>
+        <input type="password" name="confirm_password" placeholder="Confirm New Password" required>
+        <br>
+        <button type="submit">Update Password</button>
+    </form>
+    <p>Date and Time: {{ now }}</p>
+</body>
+</html>

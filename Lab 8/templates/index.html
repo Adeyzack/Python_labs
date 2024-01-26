@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Calculator</h1>
+
+    <form action="/add" method="post">
+        <input type="text" name="num1" placeholder="Number 1" />
+        <input type="text" name="num2" placeholder="Number 2" />
+        <br>
+        <button type="submit">Add</button>
+    </form>
+
+    <form action="/subtract" method="post">
+        <input type="text" name="num1" placeholder="Number 1" />
+        <input type="text" name="num2" placeholder="Number 2" />
+        <br>
+        <button type="submit">Subtract</button>
+    </form>
+
+    <form action="/divide" method="post">
+        <input type="text" name="num1" placeholder="Number 1" />
+        <input type="text" name="num2" placeholder="Number 2" />
+        <br>
+        <button type="submit">Divide</button>
+    </form>
+
+    <form action="/multiply" method="post">
+        <input type="text" name="num1" placeholder="Number 1" />
+        <input type="text" name="num2" placeholder="Number 2" />
+        <br>
+        <button type="submit">Multiply</button>
+    </form>
+
+    <h2>Links:</h2>
+    <ul>
+        <li><a href="https://www.example1.com">Example 1</a></li>
+        <li><a href="https://www.example2.com">Example 2</a></li>
+        <li><a href="https://www.example3.com">Example 3</a></li>
+    </ul>
+
+    <p>Date and Time: {{ now }}</p>
+
+    <h1>Multiplication Table</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                {% for col in range(1, 13) %}
+                    <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in range(1, 13) %}
+                <tr>
+                    <th>{{ row }}</th>
+                    {% for col in range(1, 13) %}
+                        <td>{{ row * col }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>User Registration Form:</h2>
+    <form action="/register" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <button type="submit">Register</button>
+    </form>
+
+    <h2>User Login Form:</h2>
+    <form action="/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <button type="submit">Login</button>
+    </form>
+<a href="/update_password">Update Password</a>
+
+</body>
+</html>

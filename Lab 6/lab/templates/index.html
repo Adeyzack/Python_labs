@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <p> {{ now }}</p>
+    <h1><b>SDEV 300<br> Simple Calculator</b></h1>
+    <!--create a form
+     a text field and button for the user to enter the numbers-->
+    <form action="/add" method="post">
+       <br> <input type="text" name="num1" placeholder="" />
+        <input type="text" name="num2" placeholder="" />
+        <button type="submit" style="color : blue">Add</button>
+
+    </form>
+
+    <form action="/subtract" method="post">
+       <br> <input type="text" name="num1" placeholder="" />
+        <input type="text" name="num2" placeholder="" />
+        <button type="submit" style="color : blue">Subtract</button>
+
+    </form>
+
+    <form action="/divide" method="post">
+       <br> <input type="text" name="num1" placeholder="" />
+        <input type="text" name="num2" placeholder="" />
+        <button type="submit" style=" color : blue">Divide</button>
+
+    </form>
+
+    <form action="/multiply" method="post">
+        <br><input type="text" name="num1" placeholder="" />
+        <input type="text" name="num2" placeholder="" />
+        <button type="submit" style="color : blue">Multiply</button>
+    </form>
+    <!--display links-->
+    <h3><b>Useful Links:</b></h3>
+    <ul>
+        <li><a href="https://www.khanacademy.org/math/arithmetic-home/addition-subtraction">learn Addition and Subtraction</a></li>
+        <li><a href="https://www.math-drills.com/multiop.php">Math Drill</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Order_of_operations">Order of Operation</a></li>
+    </ul>
+
+</body>
+</html>

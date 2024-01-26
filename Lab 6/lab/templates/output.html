@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Output</title>
+    <!-- calling css stylesheet file-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_r.css') }}">
+</head>
+<body>
+    <a href="/">Go Back</a>
+    <!-- Show current Date and time -->
+    <p style="color : green; text-align : right;">Date and Time: {{ now }}</p>
+    <!--Display the type of operation performed by the user -->
+    <h2>Type of Operation = {{ operation }}:</h2>
+    <!--Display the output -->
+    <p>{{ operation }} between {{ num1 }} and {{ num2 }} is {{ result }} </p>
+    <p>Click <a href="/">here</a>  to perform another operation </p>
+    <!--display useful links to the user -->
+    <h2>Useful Links:</h2>
+    <ul>
+        <li><a href="https://www.khanacademy.org/math/arithmetic-home/addition-subtraction">learn Addition and Subtraction</a></li>
+        <li><a href="https://www.math-drills.com/multiop.php">Math Drill</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Order_of_operations">Order of Operation</a></li>
+    </ul>
+
+
+</body>
+</html>

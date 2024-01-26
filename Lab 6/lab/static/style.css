@@ -1,0 +1,29 @@
+/*
+Name Zekariyas Gebremedhin
+Course: SDEV 300
+Lab Six
+Stylesheet for index.html
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+}
+
+h1 {
+    color: purple;
+    text-align : center;
+    border: 3px solid green;
+}
+
+h2 {
+    color: black;
+}
+
+h3 {
+    color: red;
+}
+p{
+   color:green;
+   text-align : right
+}

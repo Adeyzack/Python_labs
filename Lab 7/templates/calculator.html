@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-color: lightGray ;
+        }
+        .datetime {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="datetime">
+        Current Date and Time: {{ now }}
+    </div>
+
+    <h1>Welcome, {{ username }}!</h1>
+
+    <form action="/calculator" method="POST">
+        <input type="number" name="num1" placeholder="Enter number 1" required>
+        <input type="number" name="num2" placeholder="Enter number 2" required>
+        <select name="operator">
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (*)</option>
+            <option value="/">Division (/)</option>
+        </select>
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result %}
+    <h2>Result:</h2>
+    <p>{{ num1 }} {{ operator }} {{ num2 }} = {{ result }}</p>
+    {% endif %}
+
+    <a href="/logout">Logout</a>
+
+ <h3>Useful Links:</h3>
+    <ul>
+        <li><a href="https://www.khanacademy.org/math/arithmetic-home/addition-subtraction">learn Addition and Subtraction</a></li>
+        <li><a href="https://www.math-drills.com/multiop.php">Math Drill</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Order_of_operations">Order of Operation</a></li>
+    </ul>
+
+
+
+    <img src="{{ url_for('static', filename='image1.jpg') }}" align="bottom" alt="Image 1">
+    <img src="{{ url_for('static', filename='image3.jpg') }}" align="right" alt="Image 3" >
+</body>
+</html>
